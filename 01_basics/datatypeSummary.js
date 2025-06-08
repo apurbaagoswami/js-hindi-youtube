@@ -31,7 +31,7 @@ const myFunction = function(){
     console.log("helllo world");
 }
 
-console.log(typeof bigNumber)
+// console.log(typeof bigNumber)
 
 /*
 if we will check the data type function of the following as values of variable we will get
@@ -44,4 +44,33 @@ object (native and does not implement[[Call]]) = object
 object (native or host and  does implement[[Call]]) = function
 object (host and does not implement[[Call]]) = implemination defined except maynot be undefined
   */
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// There are two typws of memories (1) STACK (primitive) in stack we gwt the copy 
+//                                 (2) HEAP (non-primitive) in heap we get the reference it means everything-
+//                                                         - is done on the original value
+
+
+//example of STACK :-
+let myYoutubeName = "apurbaadotcom"
+let anotherName = myYoutubeName
+anotherName  = "chaiaurcode"
+console.log(myYoutubeName);
+console.log(anotherName);
+
+//Example of HEAP :-
+let userOne = {
+  email : "user@gole.com",
+  upi : "user@sbi"
+}
+
+let usertwo = userOne
+
+usertwo.email = "apurbaa@goswami.com"
+
+console.log(userOne.email);
+console.log(usertwo.email);
 
