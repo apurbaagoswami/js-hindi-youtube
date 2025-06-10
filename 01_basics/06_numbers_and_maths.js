@@ -15,6 +15,7 @@ const hundereds = 1000000
 // console.log(hundereds.toLocaleString('en-IN')); // add commas in Indian standards
 
 //+++++++++++++++++++++++++++++++++++++++++++  MATHS  ++++++++++++++++++++++++++++++++++++++++++++++++
+
 // console.log(Math);
 // console.log(Math.abs(-4)); //absolute value - changes negative value to positive
 // console.log(Math.round(4.3));// helps in rounding off the value
