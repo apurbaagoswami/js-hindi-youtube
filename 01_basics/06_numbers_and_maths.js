@@ -32,7 +32,3 @@ const min = 10
 const max = 20
 // when we need the values between the max and min we added the min in the last .
 console.log(Math.floor(Math.random() * (max - min + 1)) + min);
-
-
-
-
