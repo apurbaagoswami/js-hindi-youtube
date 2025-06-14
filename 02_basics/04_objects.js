@@ -58,3 +58,29 @@ const users = [
 
 //WE CAN ASLO ASK F THE OBJECT HAVE A key BY SEARCHING
 console.log(tinderUser.hasOwnProperty("isLoggedIn")); // gives answer in boolean
+
+
+//OBJECT DESTRUCTURE (getting the value from key)
+const course = {
+    courseName : "javascript",
+    price :  999,
+    courseInstructor : "Hitesh Choudhry"
+}
+// we can access it by the normal methord 
+// console.log (course.courseInstructo)r //but when we have to do it  multiple timee  the code will not be clean 
+const {courseInstructor : instructor} = course 
+console.log(instructor);
+
+//this is a JSON ( a object without and name or variable)
+// {
+//     "name" : "Apu",
+//      "age" : 19
+//}
+
+// Sometimes we will found APIs in the form of arrays also
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
