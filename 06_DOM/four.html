@@ -6,17 +6,55 @@
     <title>Document</title>
 </head>
 <body style="background-color: #212121; color: #ffffff;">
+     <h1>Programming languages :-</h1>
     <ul class="language">
         <li>javascript</li>
+    </ul>
+    <h1>Now comes the best youtube channels:</h1>
+    <ul  class="ytChannels">
+        <li>Chai aur code</li>
     </ul>
 </body>
 <script>
     function addLanguage (lang) {
         const li  = document.createElement ('li');
-        li.innerHTML = `${langName}`;
+        li.innerHTML = `${lang}`;
         document.querySelector('.language').appendChild(li)
     }
     addLanguage("python");
     addLanguage('typescript');
+
+    function addChannels (channel) {
+        const li = document.createElement('li');
+        li.innerHTML = `${channel}`;
+        document.querySelector('.ytChannels').appendChild(li);
+    }
+
+    addChannels('Apna College');
+    addChannels("code with harry");
+
+    // optimized methord (so that we dont treverse the DOM again and again)
+    function addOptiLanguage (langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addOptiLanguage('java');
+
+    // editing
+
+    const secondLang = document.querySelector(".language li:nth-child(2)");
+    //  secondLang.innerHTML = "Mojo";
+    const newli = document.createElement('li')
+    newli.textContent= "Mojo";
+    secondLang.replaceWith(newli)
+// another methord
+    const apnacollege = document.querySelector('.ytChannels li:nth-child(2)');
+   apnacollege.outerHTML = "<li>Apna college (fpr basic programming) </li>"
+
+   const lastLang = document.querySelector('.language li:last-child');
+    lastLang.remove();
+  
 </script>
 </html>
